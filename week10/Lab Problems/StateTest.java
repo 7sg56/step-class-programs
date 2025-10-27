@@ -27,7 +27,6 @@ state = OrderState.SHIPPED;
 }
 break;
 case SHIPPED:
-else if (event.equals("customerCancel")) state = OrderState.CANCELLED;
 if (event.equals("deliveryScan")) state = OrderState.DELIVERED;
 else if (event.equals("customerCancel")) state = OrderState.CANCELLED;
 break;
@@ -36,7 +35,7 @@ default:
 break;
 }
 if (state == OrderState.CANCELLED) {
-System.out.println("Order #" + orderId + " State: CANCELLED (Entry:initiateRefund)");
+System.out.println("Order #" + orderId + " State: CANCELLED (Entry: initiateRefund)");
 } else {
 System.out.println("Order #" + orderId + " State: " + state);
 }
